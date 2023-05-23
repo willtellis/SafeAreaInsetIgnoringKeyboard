@@ -11,7 +11,7 @@ import SwiftUI
 struct FloatingActionButtonApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FloatingActionButtonWithListView()
         }
     }
 }

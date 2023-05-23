@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		787BCFFC2A1D04A8000E384A /* SafeAreaInsetIgnoringKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BCFFB2A1D04A8000E384A /* SafeAreaInsetIgnoringKeyboardView.swift */; };
+		787BCFFE2A1D07BD000E384A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BCFFD2A1D07BD000E384A /* ContentView.swift */; };
 		78AA92BC2A1C007100134B8E /* FloatingActionButtonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA92BB2A1C007100134B8E /* FloatingActionButtonApp.swift */; };
-		78AA92BE2A1C007100134B8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA92BD2A1C007100134B8E /* ContentView.swift */; };
+		78AA92BE2A1C007100134B8E /* FloatingActionButtonWithListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA92BD2A1C007100134B8E /* FloatingActionButtonWithListView.swift */; };
 		78AA92C02A1C007200134B8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78AA92BF2A1C007200134B8E /* Assets.xcassets */; };
 		78AA92C32A1C007200134B8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78AA92C22A1C007200134B8E /* Preview Assets.xcassets */; };
 		78AA92CD2A1C007200134B8E /* FloatingActionButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA92CC2A1C007200134B8E /* FloatingActionButtonTests.swift */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		787BCFFB2A1D04A8000E384A /* SafeAreaInsetIgnoringKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetIgnoringKeyboardView.swift; sourceTree = "<group>"; };
+		787BCFFD2A1D07BD000E384A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		78AA92B82A1C007100134B8E /* FloatingActionButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingActionButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78AA92BB2A1C007100134B8E /* FloatingActionButtonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonApp.swift; sourceTree = "<group>"; };
-		78AA92BD2A1C007100134B8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		78AA92BD2A1C007100134B8E /* FloatingActionButtonWithListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonWithListView.swift; sourceTree = "<group>"; };
 		78AA92BF2A1C007200134B8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78AA92C22A1C007200134B8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		78AA92C82A1C007200134B8E /* FloatingActionButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloatingActionButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +98,10 @@
 		78AA92BA2A1C007100134B8E /* FloatingActionButton */ = {
 			isa = PBXGroup;
 			children = (
+				787BCFFD2A1D07BD000E384A /* ContentView.swift */,
 				78AA92BB2A1C007100134B8E /* FloatingActionButtonApp.swift */,
-				78AA92BD2A1C007100134B8E /* ContentView.swift */,
+				78AA92BD2A1C007100134B8E /* FloatingActionButtonWithListView.swift */,
+				787BCFFB2A1D04A8000E384A /* SafeAreaInsetIgnoringKeyboardView.swift */,
 				78AA92BF2A1C007200134B8E /* Assets.xcassets */,
 				78AA92C12A1C007200134B8E /* Preview Content */,
 			);
@@ -257,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78AA92BE2A1C007100134B8E /* ContentView.swift in Sources */,
+				78AA92BE2A1C007100134B8E /* FloatingActionButtonWithListView.swift in Sources */,
 				78AA92BC2A1C007100134B8E /* FloatingActionButtonApp.swift in Sources */,
+				787BCFFE2A1D07BD000E384A /* ContentView.swift in Sources */,
+				787BCFFC2A1D04A8000E384A /* SafeAreaInsetIgnoringKeyboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
