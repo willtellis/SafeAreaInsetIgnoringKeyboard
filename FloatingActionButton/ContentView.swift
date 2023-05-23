@@ -11,11 +11,10 @@ struct ContentView: View {
     @State var text = ""
 
     var body: some View {
-        SafeAreaInsetIgnoringKeyboardView {
-            List(0..<50) { _ in
-                TextField("Title", text: $text)
-            }
-        } insetContent: {
+        List(0..<50) { _ in
+            TextField("Title", text: $text)
+        }
+        .safeAreaInsetIgnoringKeyboard {
             Button("Button", action: {})
                 .buttonStyle(.borderedProminent)
         }

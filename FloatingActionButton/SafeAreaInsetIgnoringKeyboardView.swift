@@ -21,11 +21,11 @@ struct InsetContentPreferenceKey: PreferenceKey {
 }
 
 struct SafeAreaInsetIgnoringKeyboardView<Content: View, InsetContent: View>: View {
-    private let content: () -> Content
+    private let content: Content
     private let insetContent: () -> InsetContent
 
     init(
-        @ViewBuilder content: @escaping () -> Content,
+        content: Content,
         @ViewBuilder insetContent: @escaping () -> InsetContent
     ) {
         self.content = content
@@ -51,7 +51,7 @@ struct SafeAreaInsetIgnoringKeyboardView<Content: View, InsetContent: View>: Vie
         .backgroundPreferenceValue(InsetContentPreferenceKey.self) { preferences in
             GeometryReader { geometryProxy in
                 preferences.map { anchor in
-                    content()
+                    content
                     .safeAreaInset(edge: .bottom) {
                         // Inset by the height of the button
                         Spacer()
@@ -63,24 +63,44 @@ struct SafeAreaInsetIgnoringKeyboardView<Content: View, InsetContent: View>: Vie
     }
 }
 
+struct SafeAreaInsetIgnoringKeyboard<InsetContent: View>: ViewModifier {
+    private let insetContent: () -> InsetContent
+
+    init(@ViewBuilder insetContent: @escaping () -> InsetContent) {
+        self.insetContent = insetContent
+    }
+
+    func body(content: Content) -> some View {
+        SafeAreaInsetIgnoringKeyboardView(content: content, insetContent: insetContent)
+    }
+}
+
+extension View {
+    func safeAreaInsetIgnoringKeyboard<InsetContent: View>(
+        @ViewBuilder _ insetContent: @escaping () -> InsetContent
+    ) -> some View {
+        modifier(SafeAreaInsetIgnoringKeyboard(insetContent: insetContent))
+    }
+}
+
 struct SafeAreaInsetIgnoringKeyboardView_Previews: PreviewProvider {
     @State static var text = ""
 
     static var previews: some View {
-        SafeAreaInsetIgnoringKeyboardView {
+        SafeAreaInsetIgnoringKeyboardView(content:
             List(0..<50) { _ in
                 TextField("Title", text: $text)
             }
-        } insetContent: {
+        ) {
             Button("Button", action: {})
                 .buttonStyle(.borderedProminent)
         }
 
-        SafeAreaInsetIgnoringKeyboardView {
+        SafeAreaInsetIgnoringKeyboardView(content:
             List(0..<50) { _ in
                 TextField("Title", text: $text)
             }
-        } insetContent: {
+        ) {
             Button {
             } label: {
                 HStack {
@@ -91,6 +111,22 @@ struct SafeAreaInsetIgnoringKeyboardView_Previews: PreviewProvider {
             }
             .buttonStyle(.borderedProminent)
             .padding(.horizontal)
+        }
+
+        List(0..<50) { _ in
+            TextField("Title", text: $text)
+        }
+        .modifier(SafeAreaInsetIgnoringKeyboard {
+            Button("Button", action: {})
+                .buttonStyle(.borderedProminent)
+        })
+
+        List(0..<50) { _ in
+            TextField("Title", text: $text)
+        }
+        .safeAreaInsetIgnoringKeyboard {
+            Button("Button", action: {})
+                .buttonStyle(.borderedProminent)
         }
     }
 }
