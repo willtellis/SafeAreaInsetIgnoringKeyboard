@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78AA92BC2A1C007100134B8E /* FloatingActionButtonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA92BB2A1C007100134B8E /* FloatingActionButtonApp.swift */; };
+		78AA92BE2A1C007100134B8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA92BD2A1C007100134B8E /* ContentView.swift */; };
+		78AA92C02A1C007200134B8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78AA92BF2A1C007200134B8E /* Assets.xcassets */; };
+		78AA92C32A1C007200134B8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78AA92C22A1C007200134B8E /* Preview Assets.xcassets */; };
+		78AA92CD2A1C007200134B8E /* FloatingActionButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA92CC2A1C007200134B8E /* FloatingActionButtonTests.swift */; };
+		78AA92D72A1C007200134B8E /* FloatingActionButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA92D62A1C007200134B8E /* FloatingActionButtonUITests.swift */; };
+		78AA92D92A1C007200134B8E /* FloatingActionButtonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA92D82A1C007200134B8E /* FloatingActionButtonUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		78AA92C92A1C007200134B8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78AA92B02A1C007100134B8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78AA92B72A1C007100134B8E;
+			remoteInfo = FloatingActionButton;
+		};
+		78AA92D32A1C007200134B8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78AA92B02A1C007100134B8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78AA92B72A1C007100134B8E;
+			remoteInfo = FloatingActionButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		78AA92B82A1C007100134B8E /* FloatingActionButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingActionButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78AA92BB2A1C007100134B8E /* FloatingActionButtonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonApp.swift; sourceTree = "<group>"; };
+		78AA92BD2A1C007100134B8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		78AA92BF2A1C007200134B8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78AA92C22A1C007200134B8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		78AA92C82A1C007200134B8E /* FloatingActionButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloatingActionButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78AA92CC2A1C007200134B8E /* FloatingActionButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonTests.swift; sourceTree = "<group>"; };
+		78AA92D22A1C007200134B8E /* FloatingActionButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloatingActionButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78AA92D62A1C007200134B8E /* FloatingActionButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonUITests.swift; sourceTree = "<group>"; };
+		78AA92D82A1C007200134B8E /* FloatingActionButtonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78AA92B52A1C007100134B8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78AA92C52A1C007200134B8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78AA92CF2A1C007200134B8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78AA92AF2A1C007100134B8E = {
+			isa = PBXGroup;
+			children = (
+				78AA92BA2A1C007100134B8E /* FloatingActionButton */,
+				78AA92CB2A1C007200134B8E /* FloatingActionButtonTests */,
+				78AA92D52A1C007200134B8E /* FloatingActionButtonUITests */,
+				78AA92B92A1C007100134B8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		78AA92B92A1C007100134B8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78AA92B82A1C007100134B8E /* FloatingActionButton.app */,
+				78AA92C82A1C007200134B8E /* FloatingActionButtonTests.xctest */,
+				78AA92D22A1C007200134B8E /* FloatingActionButtonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78AA92BA2A1C007100134B8E /* FloatingActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				78AA92BB2A1C007100134B8E /* FloatingActionButtonApp.swift */,
+				78AA92BD2A1C007100134B8E /* ContentView.swift */,
+				78AA92BF2A1C007200134B8E /* Assets.xcassets */,
+				78AA92C12A1C007200134B8E /* Preview Content */,
+			);
+			path = FloatingActionButton;
+			sourceTree = "<group>";
+		};
+		78AA92C12A1C007200134B8E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				78AA92C22A1C007200134B8E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		78AA92CB2A1C007200134B8E /* FloatingActionButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				78AA92CC2A1C007200134B8E /* FloatingActionButtonTests.swift */,
+			);
+			path = FloatingActionButtonTests;
+			sourceTree = "<group>";
+		};
+		78AA92D52A1C007200134B8E /* FloatingActionButtonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				78AA92D62A1C007200134B8E /* FloatingActionButtonUITests.swift */,
+				78AA92D82A1C007200134B8E /* FloatingActionButtonUITestsLaunchTests.swift */,
+			);
+			path = FloatingActionButtonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78AA92B72A1C007100134B8E /* FloatingActionButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78AA92DC2A1C007200134B8E /* Build configuration list for PBXNativeTarget "FloatingActionButton" */;
+			buildPhases = (
+				78AA92B42A1C007100134B8E /* Sources */,
+				78AA92B52A1C007100134B8E /* Frameworks */,
+				78AA92B62A1C007100134B8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloatingActionButton;
+			productName = FloatingActionButton;
+			productReference = 78AA92B82A1C007100134B8E /* FloatingActionButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		78AA92C72A1C007200134B8E /* FloatingActionButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78AA92DF2A1C007200134B8E /* Build configuration list for PBXNativeTarget "FloatingActionButtonTests" */;
+			buildPhases = (
+				78AA92C42A1C007200134B8E /* Sources */,
+				78AA92C52A1C007200134B8E /* Frameworks */,
+				78AA92C62A1C007200134B8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78AA92CA2A1C007200134B8E /* PBXTargetDependency */,
+			);
+			name = FloatingActionButtonTests;
+			productName = FloatingActionButtonTests;
+			productReference = 78AA92C82A1C007200134B8E /* FloatingActionButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		78AA92D12A1C007200134B8E /* FloatingActionButtonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78AA92E22A1C007200134B8E /* Build configuration list for PBXNativeTarget "FloatingActionButtonUITests" */;
+			buildPhases = (
+				78AA92CE2A1C007200134B8E /* Sources */,
+				78AA92CF2A1C007200134B8E /* Frameworks */,
+				78AA92D02A1C007200134B8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78AA92D42A1C007200134B8E /* PBXTargetDependency */,
+			);
+			name = FloatingActionButtonUITests;
+			productName = FloatingActionButtonUITests;
+			productReference = 78AA92D22A1C007200134B8E /* FloatingActionButtonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78AA92B02A1C007100134B8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					78AA92B72A1C007100134B8E = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					78AA92C72A1C007200134B8E = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 78AA92B72A1C007100134B8E;
+					};
+					78AA92D12A1C007200134B8E = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 78AA92B72A1C007100134B8E;
+					};
+				};
+			};
+			buildConfigurationList = 78AA92B32A1C007100134B8E /* Build configuration list for PBXProject "FloatingActionButton" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78AA92AF2A1C007100134B8E;
+			productRefGroup = 78AA92B92A1C007100134B8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78AA92B72A1C007100134B8E /* FloatingActionButton */,
+				78AA92C72A1C007200134B8E /* FloatingActionButtonTests */,
+				78AA92D12A1C007200134B8E /* FloatingActionButtonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78AA92B62A1C007100134B8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78AA92C32A1C007200134B8E /* Preview Assets.xcassets in Resources */,
+				78AA92C02A1C007200134B8E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78AA92C62A1C007200134B8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78AA92D02A1C007200134B8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78AA92B42A1C007100134B8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78AA92BE2A1C007100134B8E /* ContentView.swift in Sources */,
+				78AA92BC2A1C007100134B8E /* FloatingActionButtonApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78AA92C42A1C007200134B8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78AA92CD2A1C007200134B8E /* FloatingActionButtonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78AA92CE2A1C007200134B8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78AA92D92A1C007200134B8E /* FloatingActionButtonUITestsLaunchTests.swift in Sources */,
+				78AA92D72A1C007200134B8E /* FloatingActionButtonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78AA92CA2A1C007200134B8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78AA92B72A1C007100134B8E /* FloatingActionButton */;
+			targetProxy = 78AA92C92A1C007200134B8E /* PBXContainerItemProxy */;
+		};
+		78AA92D42A1C007200134B8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78AA92B72A1C007100134B8E /* FloatingActionButton */;
+			targetProxy = 78AA92D32A1C007200134B8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		78AA92DA2A1C007200134B8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		78AA92DB2A1C007200134B8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78AA92DD2A1C007200134B8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FloatingActionButton/Preview Content\"";
+				DEVELOPMENT_TEAM = T86PA97827;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willtellis.FloatingActionButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		78AA92DE2A1C007200134B8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FloatingActionButton/Preview Content\"";
+				DEVELOPMENT_TEAM = T86PA97827;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willtellis.FloatingActionButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		78AA92E02A1C007200134B8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T86PA97827;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willtellis.FloatingActionButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloatingActionButton.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FloatingActionButton";
+			};
+			name = Debug;
+		};
+		78AA92E12A1C007200134B8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T86PA97827;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willtellis.FloatingActionButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloatingActionButton.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FloatingActionButton";
+			};
+			name = Release;
+		};
+		78AA92E32A1C007200134B8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T86PA97827;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willtellis.FloatingActionButtonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FloatingActionButton;
+			};
+			name = Debug;
+		};
+		78AA92E42A1C007200134B8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T86PA97827;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willtellis.FloatingActionButtonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FloatingActionButton;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78AA92B32A1C007100134B8E /* Build configuration list for PBXProject "FloatingActionButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78AA92DA2A1C007200134B8E /* Debug */,
+				78AA92DB2A1C007200134B8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78AA92DC2A1C007200134B8E /* Build configuration list for PBXNativeTarget "FloatingActionButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78AA92DD2A1C007200134B8E /* Debug */,
+				78AA92DE2A1C007200134B8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78AA92DF2A1C007200134B8E /* Build configuration list for PBXNativeTarget "FloatingActionButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78AA92E02A1C007200134B8E /* Debug */,
+				78AA92E12A1C007200134B8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78AA92E22A1C007200134B8E /* Build configuration list for PBXNativeTarget "FloatingActionButtonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78AA92E32A1C007200134B8E /* Debug */,
+				78AA92E42A1C007200134B8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78AA92B02A1C007100134B8E /* Project object */;
+}
