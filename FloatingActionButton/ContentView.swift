@@ -17,6 +17,11 @@ struct ContentView: View {
         .safeAreaInsetIgnoringKeyboard {
             Button("Button", action: {})
                 .buttonStyle(.borderedProminent)
+                .padding(16)
+        } background: {
+            Color.white
+                .cornerRadius(24)
+                .shadow(radius: 5)
         }
     }
 }

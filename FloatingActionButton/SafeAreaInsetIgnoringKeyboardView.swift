@@ -20,16 +20,19 @@ struct InsetContentPreferenceKey: PreferenceKey {
     }
 }
 
-struct SafeAreaInsetIgnoringKeyboardView<Content: View, InsetContent: View>: View {
+struct SafeAreaInsetIgnoringKeyboardView<Content: View, InsetContent: View, BackgroundContent: View>: View {
     private let content: Content
-    private let insetContent: () -> InsetContent
+    private let insetContent: InsetContent
+    private let backgroundContent: BackgroundContent
 
     init(
         content: Content,
-        @ViewBuilder insetContent: @escaping () -> InsetContent
+        @ViewBuilder inset insetContentBuilder: () -> InsetContent,
+        @ViewBuilder background backgroundContentBuilder: () -> BackgroundContent = { EmptyView() }
     ) {
         self.content = content
-        self.insetContent = insetContent
+        self.insetContent = insetContentBuilder()
+        self.backgroundContent = backgroundContentBuilder()
     }
 
     var body: some View {
@@ -37,7 +40,7 @@ struct SafeAreaInsetIgnoringKeyboardView<Content: View, InsetContent: View>: Vie
             Spacer(minLength: 0)
             HStack(spacing: 0) {
                 Spacer(minLength: 0)
-                insetContent()
+                insetContent
                     .anchorPreference(
                         key: InsetContentPreferenceKey.self,
                         value: .bounds
@@ -51,35 +54,63 @@ struct SafeAreaInsetIgnoringKeyboardView<Content: View, InsetContent: View>: Vie
         .backgroundPreferenceValue(InsetContentPreferenceKey.self) { preferences in
             GeometryReader { geometryProxy in
                 preferences.map { anchor in
-                    content
-                    .safeAreaInset(edge: .bottom) {
-                        // Inset by the height of the button
+                    VStack {
                         Spacer()
-                            .frame(height: geometryProxy[anchor].height)
+                        backgroundContent
+                            .frame(height: geometryProxy[anchor].height + geometryProxy.safeAreaInsets.bottom)
                     }
+                    .ignoresSafeArea(edges: .bottom)
+                }
+            }
+            .ignoresSafeArea(.keyboard)
+        }
+        .backgroundPreferenceValue(InsetContentPreferenceKey.self) { preferences in
+            GeometryReader { geometryProxy in
+                preferences.map { anchor in
+                    content
+                        .safeAreaInset(edge: .bottom) {
+                            // Inset by the height of the button
+                            Spacer()
+                                .frame(height: geometryProxy[anchor].height)
+                        }
                 }
             }
         }
     }
 }
 
-struct SafeAreaInsetIgnoringKeyboard<InsetContent: View>: ViewModifier {
-    private let insetContent: () -> InsetContent
+struct SafeAreaInsetIgnoringKeyboard<InsetContent: View, BackgroundContent: View>: ViewModifier {
+    private let insetContentBuilder: () -> InsetContent
+    private let backgroundContentBuilder: () -> BackgroundContent
 
-    init(@ViewBuilder insetContent: @escaping () -> InsetContent) {
-        self.insetContent = insetContent
+    init(
+        @ViewBuilder _ insetContentBuilder: @escaping () -> InsetContent,
+        @ViewBuilder background backgroundContentBuilder: @escaping () -> BackgroundContent = { EmptyView() }
+    ) {
+        self.insetContentBuilder = insetContentBuilder
+        self.backgroundContentBuilder = backgroundContentBuilder
     }
 
     func body(content: Content) -> some View {
-        SafeAreaInsetIgnoringKeyboardView(content: content, insetContent: insetContent)
+        SafeAreaInsetIgnoringKeyboardView(
+            content: content,
+            inset: insetContentBuilder,
+            background: backgroundContentBuilder
+        )
     }
 }
 
 extension View {
-    func safeAreaInsetIgnoringKeyboard<InsetContent: View>(
-        @ViewBuilder _ insetContent: @escaping () -> InsetContent
+    func safeAreaInsetIgnoringKeyboard<InsetContent: View, BackgroundContent: View>(
+        @ViewBuilder _ insetContentBuilder: @escaping () -> InsetContent,
+        @ViewBuilder background backgroundContentBuilder: @escaping () -> BackgroundContent = { EmptyView() }
     ) -> some View {
-        modifier(SafeAreaInsetIgnoringKeyboard(insetContent: insetContent))
+        modifier(
+            SafeAreaInsetIgnoringKeyboard(
+                insetContentBuilder,
+                background: backgroundContentBuilder
+            )
+        )
     }
 }
 
@@ -95,6 +126,7 @@ struct SafeAreaInsetIgnoringKeyboardView_Previews: PreviewProvider {
             Button("Button", action: {})
                 .buttonStyle(.borderedProminent)
         }
+        .previewDisplayName("View with hugging button")
 
         SafeAreaInsetIgnoringKeyboardView(content:
             List(0..<50) { _ in
@@ -112,14 +144,7 @@ struct SafeAreaInsetIgnoringKeyboardView_Previews: PreviewProvider {
             .buttonStyle(.borderedProminent)
             .padding(.horizontal)
         }
-
-        List(0..<50) { _ in
-            TextField("Title", text: $text)
-        }
-        .modifier(SafeAreaInsetIgnoringKeyboard {
-            Button("Button", action: {})
-                .buttonStyle(.borderedProminent)
-        })
+        .previewDisplayName("View with expanding button")
 
         List(0..<50) { _ in
             TextField("Title", text: $text)
@@ -128,5 +153,20 @@ struct SafeAreaInsetIgnoringKeyboardView_Previews: PreviewProvider {
             Button("Button", action: {})
                 .buttonStyle(.borderedProminent)
         }
+        .previewDisplayName("View modifier with hugging button")
+
+        List(0..<50) { _ in
+            TextField("Title", text: $text)
+        }
+        .safeAreaInsetIgnoringKeyboard {
+            Button("Button", action: {})
+                .buttonStyle(.borderedProminent)
+                .padding(20)
+        } background: {
+            Color.white
+                .cornerRadius(24)
+                .shadow(radius: 5)
+        }
+        .previewDisplayName("View modifier with background")
     }
 }
